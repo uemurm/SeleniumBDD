@@ -1,16 +1,21 @@
 package jp.funk;
 
+import jp.funk.pages.HomePage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class LoginTests extends BaseTests {
+public class SearchTests extends BaseTests {
+    private HomePage thePage;
+
     @BeforeEach
     public void loadPage() {
         driver.get("https://www.ebay.com.au/");
+        thePage = new HomePage(driver);
     }
 
     @Test
-    public void successfulLogin() {
-        System.out.println("HELLO");
+    public void searchReturnsResults() {
+        thePage.inputSearchKeyWords("iPhone");
+        thePage.clickSearchBtn();
     }
 }
