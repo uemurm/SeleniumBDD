@@ -11,6 +11,7 @@ public class BaseTests {
     @BeforeAll
     public static void setUp() {
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     @AfterAll
