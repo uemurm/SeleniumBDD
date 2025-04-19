@@ -36,4 +36,10 @@ public class LoginSteps extends BaseSteps {
         assertEquals(expectedText, dashboardPage.getTopBarBreadcrumb());
         driver.quit();
     }
+
+    @Then("I should see {string} in the error message")
+    public void iShouldSeeInTheErrorMessage(String expectedText) {
+        assertEquals(expectedText, loginPage.getErrorMessage());
+        driver.quit();
+    }
 }

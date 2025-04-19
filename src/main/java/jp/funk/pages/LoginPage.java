@@ -32,4 +32,8 @@ public class LoginPage {
         driver.findElement(loginBtn).click();
         return new DashboardPage(driver);
     }
+
+    public String getErrorMessage() {
+        return driver.findElement(By.xpath("//div[contains(@class, 'oxd-alert-content')] ")).getText();
+    }
 }
