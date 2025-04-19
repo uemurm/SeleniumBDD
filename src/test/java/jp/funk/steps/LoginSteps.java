@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LoginSteps {
+public class LoginSteps extends BaseSteps {
     private WebDriver driver;
     private LoginPage loginPage;
     private DashboardPage dashboardPage;

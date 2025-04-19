@@ -1,11 +1,11 @@
-package jp.funk;
+package jp.funk.steps;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BaseTests {
+public class BaseSteps {
     protected static WebDriver driver;
 
     @BeforeAll
@@ -16,6 +16,8 @@ public class BaseTests {
 
     @AfterAll
     public static void tearDown() {
-        driver.quit();
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
