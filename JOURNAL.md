@@ -1,8 +1,11 @@
 # Todo
 - [x] Write a test that migrates from a page to another.
-- [ ] Introduce Cucumber to make it behaviour-driven.
+- [x] Introduce Cucumber to make it behaviour-driven.
 - [x] Find a website that is simpler than eBay.com.au 
 - [x] Maximise browser window size before interacting elements.
+
+## 2025-04-18 Fri
+Introduced Cucumber then wrote a Login test that passes.
 
 ## 2025-04-16 Wed
 Fixed the first test for the new site.
