@@ -42,4 +42,16 @@ public class LoginSteps extends BaseSteps {
         assertEquals(expectedText, loginPage.getErrorMessage());
         driver.quit();
     }
+
+    @Then("I should see {string} message for the username field")
+    public void iShouldSeeMessageForUsername(String expectedText) {
+        assertEquals(expectedText, loginPage.getErrorMessageForUsername());
+        driver.quit();
+    }
+
+    @Then("I should see {string} message for the password field")
+    public void iShouldSeeMessageForPassword(String expectedText) {
+        assertEquals(expectedText, loginPage.getErrorMessageForPassword());
+        driver.quit();
+    }
 }

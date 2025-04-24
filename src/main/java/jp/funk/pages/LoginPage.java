@@ -13,6 +13,8 @@ public class LoginPage {
     private final By usernameField = By.name("username");
     private final By passwordField = By.name("password");
     private final By loginBtn = By.cssSelector("button[type='submit']");
+    private final By errorForUsername = By.cssSelector("span.oxd-text.oxd-text--span");
+    private final By errorForPassword = By.cssSelector("span.oxd-text.oxd-text--span");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -35,5 +37,13 @@ public class LoginPage {
 
     public String getErrorMessage() {
         return driver.findElement(By.xpath("//div[contains(@class, 'oxd-alert-content')] ")).getText();
+    }
+
+    public String getErrorMessageForUsername() {
+        return driver.findElement(errorForUsername).getText();
+    }
+
+    public String getErrorMessageForPassword() {
+        return driver.findElement(errorForPassword).getText();
     }
 }
