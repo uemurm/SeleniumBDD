@@ -4,6 +4,9 @@
 - [x] Find a website that is simpler than eBay.com.au 
 - [x] Maximise browser window size before interacting elements.
 
+## 2025-04-24 Thu
+Cucumber prohibits step definition classes from extending another step class so implemented them using composition.
+
 ## 2025-04-18 Fri
 Introduced Cucumber then wrote a Login test that passes.
 
