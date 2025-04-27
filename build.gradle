@@ -20,7 +20,36 @@ dependencies {
     testImplementation("io.cucumber:cucumber-junit-platform-engine:7.22.0")
 }
 
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+tasks.register('cucumberCli') {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            mainClass = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'pretty',
+                    '--plugin', 'html:target/cucumber-report.html',
+                    '--glue', 'jp.funk.steps',
+                    'src/test/resources']
+        }
+    }
+}
+
 test {
     useJUnitPlatform()
     include '**/RunCucumberTest.class'
+//    testLogging {
+//        events "started", "passed", "skipped", "failed"
+//        showStandardStreams = true
+//    }
+}
+
+tasks.named('processTestResources') {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }

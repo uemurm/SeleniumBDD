@@ -1,8 +1,14 @@
 # Todo
+- [x] Run all tests from command line using gradle.
+- [ ] Set up GitHub Actions to run all the tests.
 - [x] Write a test that migrates from a page to another.
 - [x] Introduce Cucumber to make it behaviour-driven.
 - [x] Find a website that is simpler than eBay.com.au 
 - [x] Maximise browser window size before interacting elements.
+
+## 2025-04-27 Sun
+Finally succeeded in running tests from command line.
+cf. https://www.baeldung.com/java-cucumber-gradle
 
 ## 2025-04-24 Thu
 Cucumber prohibits step definition classes from extending another step class so implemented them using composition.
