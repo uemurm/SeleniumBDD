@@ -9,24 +9,25 @@ import java.time.Duration;
 
 public class LoginPage {
     private final WebDriver driver;
+    WebDriverWait wait;
 
     private final By usernameField = By.name("username");
     private final By passwordField = By.name("password");
     private final By loginBtn = By.cssSelector("button[type='submit']");
+    private final By errorMessage = By.xpath("//div[contains(@class, 'oxd-alert-content')]");
     private final By errorForUsername = By.cssSelector("span.oxd-text.oxd-text--span");
     private final By errorForPassword = By.cssSelector("span.oxd-text.oxd-text--span");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
     public void inputUsername(String username) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
         wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField)).sendKeys(username);
     }
 
     public void inputPassword(String password) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
         wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField)).sendKeys(password);
     }
 
@@ -36,14 +37,14 @@ public class LoginPage {
     }
 
     public String getErrorMessage() {
-        return driver.findElement(By.xpath("//div[contains(@class, 'oxd-alert-content')] ")).getText();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage)).getText();
     }
 
     public String getErrorMessageForUsername() {
-        return driver.findElement(errorForUsername).getText();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorForUsername)).getText();
     }
 
     public String getErrorMessageForPassword() {
-        return driver.findElement(errorForPassword).getText();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorForPassword)).getText();
     }
 }
