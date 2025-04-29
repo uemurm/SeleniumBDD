@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  run_tests:
+    name: Run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Cucumber Tests
+        run: ./gradlew cucumberCli
