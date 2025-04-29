@@ -1,6 +1,7 @@
 # Todo
 - [x] Run all tests from command line using gradle.
 - [ ] Set up GitHub Actions to run all the tests.
+- [ ] Don't run GitHub actions when pushing only .md files. 
 - [x] Write a test that migrates from a page to another.
 - [x] Introduce Cucumber to make it behaviour-driven.
 - [x] Find a website that is simpler than eBay.com.au 
