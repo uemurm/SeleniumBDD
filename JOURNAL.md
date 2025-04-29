@@ -6,6 +6,9 @@
 - [x] Find a website that is simpler than eBay.com.au 
 - [x] Maximise browser window size before interacting elements.
 
+## 2025-04-29 Tue
+Added `.github/workflows/ci.yml` to run all tests on GitHub Actions.
+
 ## 2025-04-27 Sun
 Finally succeeded in running tests from command line.
 cf. https://www.baeldung.com/java-cucumber-gradle
