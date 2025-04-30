@@ -1,11 +1,15 @@
 # Todo
 - [x] Run all tests from command line using gradle.
-- [ ] Set up GitHub Actions to run all the tests.
+- [x] Set up GitHub Actions to run all the tests.
 - [ ] Don't run GitHub actions when pushing only .md files. 
 - [x] Write a test that migrates from a page to another.
 - [x] Introduce Cucumber to make it behaviour-driven.
-- [x] Find a website that is simpler than eBay.com.au 
+- [x] Find a website that is simpler than eBay.com.au
 - [x] Maximise browser window size before interacting elements.
+
+## 2025-04-30 Wed
+Added options such as headless mode to Chrome driver to run tests on GitHub Actions.
+Confirmed that all existing tests pass on GitHub Actions.
 
 ## 2025-04-29 Tue
 Added `.github/workflows/ci.yml` to run all tests on GitHub Actions.
