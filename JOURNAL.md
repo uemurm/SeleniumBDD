@@ -1,6 +1,8 @@
 # Todo
 - [x] Run all tests from command line using gradle.
 - [x] Set up GitHub Actions to run all the tests.
+- [ ] Set up a cookie to bypass login to make other tests independent.
+- [ ] Write a test to update "My Info".
 - [x] Don't run GitHub actions when pushing only .md files. 
 - [x] Write a test that migrates from a page to another.
 - [x] Introduce Cucumber to make it behaviour-driven.
