@@ -22,6 +22,7 @@ public class WebDriverManager {
             }
 
             options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
+            options.addArguments("lang=en-US");
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
         }
