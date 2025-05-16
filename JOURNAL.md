@@ -1,6 +1,7 @@
 # Todo
 - [x] Run all tests from command line using gradle.
 - [x] Set up GitHub Actions to run all the tests.
+- [x] Set browser locale so that expectations can be in English.
 - [ ] Set up a cookie to bypass login to make other tests independent.
 - [ ] Write a test to update "My Info".
 - [x] Don't run GitHub actions when pushing only .md files. 
@@ -8,6 +9,9 @@
 - [x] Introduce Cucumber to make it behaviour-driven.
 - [x] Find a website that is simpler than eBay.com.au
 - [x] Maximise browser window size before interacting elements.
+
+## 2025-05-16 Fri
+Tests failed as the web page was displayed in Chinese. Set locale then.
 
 ## 2025-05-13 Tue
 Fleshed out README.md with more details about the project, including technologies used, getting started instructions, and project structure highlights.
