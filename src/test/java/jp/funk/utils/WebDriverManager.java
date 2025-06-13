@@ -21,7 +21,7 @@ public class WebDriverManager {
                 throw new RuntimeException("Failed to create temporary user data directory", e);
             }
 
-//            options.addArguments("--headless");
+            options.addArguments("--headless");
             options.addArguments("--start-maximized", "--no-sandbox", "--disable-dev-shm-usage");
             options.addArguments("lang=en-US");
             driver = new ChromeDriver(options);
