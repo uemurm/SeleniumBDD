@@ -10,6 +10,9 @@
 - [x] Find a website that is simpler than eBay.com.au
 - [x] Maximise browser window size before interacting elements.
 
+## 2025-06-13 Fri
+Migrated to the site of "Hotel Planisphere".
+
 ## 2025-05-29 Thu
 Found a better website to work on so migrated from Orange HRM. Tested successful login only for starters.
 
