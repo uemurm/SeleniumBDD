@@ -10,8 +10,8 @@ Feature: Login
     Given I am on the login page
     When I enter "foo_bar@example.com" as username and "password" as password
     And I click the login button
-    Then I should see "Email or password is invalid!!" for username
-    Then I should see "Email or password is invalid!!" for password
+    Then I should see "Email or password is invalid." for username
+    Then I should see "Email or password is invalid." for password
 
   Scenario: Incorrect password
     Given I am on the login page
