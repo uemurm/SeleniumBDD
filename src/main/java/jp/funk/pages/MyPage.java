@@ -7,16 +7,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class DashboardPage {
+public class MyPage {
     private final WebDriver driver;
-    private final By topBarBreadcrumb = By.cssSelector("span[class=\"oxd-topbar-header-breadcrumb\"] > h6");
+    private final By header = By.tagName("h2");
 
-    public DashboardPage(WebDriver driver) {
+    public MyPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public String getTopBarBreadcrumb() {
+    public String getHeader() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(topBarBreadcrumb)).getText();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(header)).getText();
     }
 }

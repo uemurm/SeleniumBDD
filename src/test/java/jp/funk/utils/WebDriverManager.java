@@ -12,6 +12,7 @@ public class WebDriverManager {
 
     public static void setUp() {
         ChromeOptions options = new ChromeOptions();
+        var githubActions = Boolean.parseBoolean(System.getenv("GITHUB_ACTIONS"));
 
         if (driver == null) {
             try {
@@ -21,7 +22,9 @@ public class WebDriverManager {
                 throw new RuntimeException("Failed to create temporary user data directory", e);
             }
 
-            options.addArguments("--headless");
+            if (githubActions) {
+                options.addArguments("--headless");
+            }
             options.addArguments("--start-maximized", "--no-sandbox", "--disable-dev-shm-usage");
             options.addArguments("lang=en-US");
             driver = new ChromeDriver(options);

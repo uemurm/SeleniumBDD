@@ -11,35 +11,38 @@ public class LoginPage {
     private final WebDriver driver;
     WebDriverWait wait;
 
-    private final By usernameField = By.name("username");
-    private final By passwordField = By.name("password");
-    private final By loginBtn = By.cssSelector("button[type='submit']");
-    private final By errorMessage = By.xpath("//div[contains(@class, 'oxd-alert-content')]");
-    private final By errorForUsername = By.cssSelector("span.oxd-text.oxd-text--span");
-    private final By errorForPassword = By.cssSelector("span.oxd-text.oxd-text--span");
+    private final By emailField = By.id("email");
+    private final By passwordField = By.id("password");
+    private final By loginBtn = By.id("login-button");
+    private final By errorForUsername = By.id("email-message");
+    private final By errorForPassword = By.id("password-message");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
-    public void inputUsername(String username) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField)).sendKeys(username);
+    public void inputEmail(String email) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(emailField)).sendKeys(email);
     }
 
     public void inputPassword(String password) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField)).sendKeys(password);
     }
 
-    public DashboardPage clickLoginBtn() {
+    public MyPage clickLoginBtn() {
         driver.findElement(loginBtn).click();
-        return new DashboardPage(driver);
+        return new MyPage(driver);
     }
 
-    public String getErrorMessage() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage)).getText();
-    }
-
+//    public String getEmailMessage() {
+//        return wait.until(ExpectedConditions.visibilityOfElementLocated(emailMessage)).getText();
+//    }
+//
+//    public String getPasswordMessage() {
+//        return wait.until(ExpectedConditions.visibilityOfElementLocated(passwordMessage)).getText();
+//    }
+//
     public String getErrorMessageForUsername() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(errorForUsername)).getText();
     }

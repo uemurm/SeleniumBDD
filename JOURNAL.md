@@ -2,6 +2,7 @@
 - [x] Run all tests from command line using gradle.
 - [x] Set up GitHub Actions to run all the tests.
 - [x] Set browser locale so that expectations can be in English.
+- [x] Detect if it's GitHub and run headless.
 - [ ] Set up a cookie to bypass login to make other tests independent.
 - [ ] Write a test to update "My Info".
 - [x] Don't run GitHub actions when pushing only .md files. 
@@ -9,6 +10,12 @@
 - [x] Introduce Cucumber to make it behaviour-driven.
 - [x] Find a website that is simpler than eBay.com.au
 - [x] Maximise browser window size before interacting elements.
+
+## 2025-06-13 Fri
+Migrated to the site of "Hotel Planisphere".
+
+## 2025-05-29 Thu
+Found a better website to work on so migrated from Orange HRM. Tested successful login only for starters.
 
 ## 2025-05-16 Fri
 Tests failed as the web page was displayed in Chinese. Set locale then.
