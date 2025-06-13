@@ -14,6 +14,8 @@ public class LoginPage {
     private final By emailField = By.id("email");
     private final By passwordField = By.id("password");
     private final By loginBtn = By.id("login-button");
+    private final By errorForUsername = By.id("email-message");
+    private final By errorForPassword = By.id("password-message");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -33,15 +35,19 @@ public class LoginPage {
         return new MyPage(driver);
     }
 
-//    public String getErrorMessage() {
-//        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage)).getText();
+//    public String getEmailMessage() {
+//        return wait.until(ExpectedConditions.visibilityOfElementLocated(emailMessage)).getText();
 //    }
 //
-//    public String getErrorMessageForUsername() {
-//        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorForUsername)).getText();
+//    public String getPasswordMessage() {
+//        return wait.until(ExpectedConditions.visibilityOfElementLocated(passwordMessage)).getText();
 //    }
 //
-//    public String getErrorMessageForPassword() {
-//        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorForPassword)).getText();
-//    }
+    public String getErrorMessageForUsername() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorForUsername)).getText();
+    }
+
+    public String getErrorMessageForPassword() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorForPassword)).getText();
+    }
 }

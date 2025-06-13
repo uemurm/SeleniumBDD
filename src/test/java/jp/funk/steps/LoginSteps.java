@@ -48,18 +48,23 @@ public class LoginSteps {
         assertEquals(expectedText, myPage.getHeader());
     }
 
-//    @Then("I should see {string} in the error message")
-//    public void iShouldSeeInTheErrorMessage(String expectedText) {
-//        assertEquals(expectedText, loginPage.getErrorMessage());
-//    }
-//
-//    @Then("I should see {string} message for the username field")
-//    public void iShouldSeeMessageForUsername(String expectedText) {
-//        assertEquals(expectedText, loginPage.getErrorMessageForUsername());
-//    }
-//
-//    @Then("I should see {string} message for the password field")
-//    public void iShouldSeeMessageForPassword(String expectedText) {
-//        assertEquals(expectedText, loginPage.getErrorMessageForPassword());
-//    }
+    @Then("I should see {string} for username")
+    public void iShouldSeeForUsername(String expectedText) {
+        assertEquals(expectedText, loginPage.getErrorMessageForUsername());
+    }
+
+    @And("I should see {string} for password")
+    public void iShouldSeeForPassword(String expectedText) {
+        assertEquals(expectedText, loginPage.getErrorMessageForPassword());
+    }
+
+    @Then("I should see {string} message for the username field")
+    public void iShouldSeeMessageForUsername(String expectedText) {
+        assertEquals(expectedText, loginPage.getErrorMessageForUsername());
+    }
+
+    @Then("I should see {string} message for the password field")
+    public void iShouldSeeMessageForPassword(String expectedText) {
+        assertEquals(expectedText, loginPage.getErrorMessageForPassword());
+    }
 }
