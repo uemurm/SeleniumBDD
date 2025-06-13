@@ -2,6 +2,7 @@
 - [x] Run all tests from command line using gradle.
 - [x] Set up GitHub Actions to run all the tests.
 - [x] Set browser locale so that expectations can be in English.
+- [x] Detect if it's GitHub and run headless.
 - [ ] Set up a cookie to bypass login to make other tests independent.
 - [ ] Write a test to update "My Info".
 - [x] Don't run GitHub actions when pushing only .md files. 
