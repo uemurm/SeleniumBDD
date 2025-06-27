@@ -8,15 +8,25 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class MyPage {
-    private final WebDriver driver;
+    WebDriverWait wait;
+
     private final By header = By.tagName("h2");
+    private final By email = By.id("email");
+    private final By name = By.id("username");
 
     public MyPage(WebDriver driver) {
-        this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
     public String getHeader() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(header)).getText();
+    }
+
+    public String getEmail() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(email)).getText();
+    }
+
+    public String getName() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(name)).getText();
     }
 }
