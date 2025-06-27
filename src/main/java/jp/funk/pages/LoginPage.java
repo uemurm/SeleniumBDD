@@ -22,6 +22,12 @@ public class LoginPage {
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
+    public MyPage doLogin(String username, String password) {
+        inputEmail(username);
+        inputPassword(password);
+        return clickLoginBtn();
+    }
+
     public void inputEmail(String email) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(emailField)).sendKeys(email);
     }
@@ -35,15 +41,7 @@ public class LoginPage {
         return new MyPage(driver);
     }
 
-//    public String getEmailMessage() {
-//        return wait.until(ExpectedConditions.visibilityOfElementLocated(emailMessage)).getText();
-//    }
-//
-//    public String getPasswordMessage() {
-//        return wait.until(ExpectedConditions.visibilityOfElementLocated(passwordMessage)).getText();
-//    }
-//
-    public String getErrorMessageForUsername() {
+public String getErrorMessageForUsername() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(errorForUsername)).getText();
     }
 
