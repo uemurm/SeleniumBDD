@@ -11,6 +11,12 @@
 - [x] Find a website that is simpler than eBay.com.au
 - [x] Maximise browser window size before interacting elements.
 
+## 2025-06-28 Sat
+Test attributes of all users using a table of examples.
+
+## 2025-06-27 Fri
+Test contents of My Page for two users. 
+
 ## 2025-06-13 Fri
 Migrated to the site of "Hotel Planisphere".
 

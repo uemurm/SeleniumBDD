@@ -10,12 +10,15 @@ repositories {
 }
 
 dependencies {
+    // Selenium
     implementation 'org.seleniumhq.selenium:selenium-java:4.33.0'
 
+    // JUnit
     testImplementation platform('org.junit:junit-bom:5.11.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation("org.junit.platform:junit-platform-suite-api")
 
+    // Cucumber
     testImplementation("io.cucumber:cucumber-java:7.22.0")
     testImplementation("io.cucumber:cucumber-junit-platform-engine:7.22.0")
 }
